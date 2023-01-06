@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.projects, .filter, .clients__list, .benefits__list, .header, .activites__list,
+.projects, .filter, .clients__list, .team, .benefits__list, .header, .activites__list,
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
