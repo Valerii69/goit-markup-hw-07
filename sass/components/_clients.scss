@@ -1,0 +1,42 @@
+.clients {
+    @extend %section
+}
+.clients__list {
+    @extend %container;
+} 
+
+.clients__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $titleTextColor;
+    margin-bottom: 50px;
+}
+
+.clients__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $colorSocialLink;
+    border-radius: 4px;
+    fill: $colorSocialLink;
+    transition: fill 250ms $transitionCubic, border 250ms  $transitionCubic;
+
+    &:hover,
+    &:focus {
+    border: 1px solid $accentColor;
+    fill: $accentColor;
+}
+}
+
+

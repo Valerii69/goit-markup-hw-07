@@ -1,0 +1,31 @@
+%container {
+    display: flex;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    list-style: none; 
+}
+
+%list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+%section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+%section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}

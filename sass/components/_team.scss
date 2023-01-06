@@ -1,0 +1,72 @@
+.team {
+    background-color: $buttonBackgroundColor;
+    @extend %section;                                    
+}
+                                    
+.team__list {
+    flex-wrap: wrap;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+ 
+    &__list {
+   @extend %list
+}
+}
+
+
+
+.team__item {
+    margin-left: 0px;
+    background: $whiteColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    transition: transform 250ms $transitionCubic;
+}   
+
+.team__item:nth-child(1) {
+    margin-left: 0;
+}
+
+
+.team__name {
+    color: $titleTextColor;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+   
+  
+}
+
+.team__members {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 16px;
+}
+
+.team__members {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+ }
+
+.team__foto {
+    margin-bottom: 30px;
+}
+
+.humana-list {
+    display: block;
+    width: 270px;
+    margin-left: 0px;
+    box-shadow: $BoxShadow $colorBoxShadow;
+    transition: transform 250ms $transitionCubic;
+     
+}
+

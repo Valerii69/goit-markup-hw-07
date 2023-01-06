@@ -1,0 +1,27 @@
+.logo {
+    display: flex;
+    text-decoration: none;
+    color: $titleTextColor;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-right: 93px ;
+    align-items: center;
+    
+    &--accent {
+    color: $accentColor; 
+
+    }
+    &--footer {
+    color: $whiteColor;
+    }
+
+
+}
+
+
+
+ 

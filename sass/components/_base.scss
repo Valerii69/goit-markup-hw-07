@@ -1,0 +1,123 @@
+body {
+    display: block;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $primaryTextColor;
+    font-family: "Roboto",-apple-system,BlinkMacSystemFont,avenir next,avenir,segoe ui,helvetica neue,helvetica,Cantarell,Ubuntu,roboto,noto,arial,sans-serif;
+}
+textarea {
+    margin: 0px;
+    padding: 0px;
+}
+label {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    margin: 0px;
+    padding: 0px;
+}
+ul { 
+    list-style: none;
+}
+
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+    
+}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+/* Свойства для корректного отображения картинок */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Свойства для обнуления курсива у address */
+address {
+	font-style: normal;
+    margin-top: 20px;
+}
+
+
+/* обнуление маржинов у ul */
+.nav,
+.contacts {
+    margin: 0;
+}
+
+
+
+.activites__list,
+.header__container {
+    @extend %container;
+   }
+
+.logo__contacts,
+.logo__footer,
+.address,
+.link__footer,
+.link__address,
+.footer__container {
+    text-decoration: none;
+}
+
+
+
+.footer__container{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+                                    /* header */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $borderColorPage;
+    padding-right: 0px;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    align-items: normal;
+
+}
+
+                          
+                            /* h2*/
+
+.section__title,
+.team__title {
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+    /* margin-bottom: 10; */
+    color: $titleTextColor;
+}

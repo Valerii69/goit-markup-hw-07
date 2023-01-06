@@ -23,10 +23,12 @@
 
 
                                         /* сброс */
+                            /* sass\components\_base.scss */
 textarea {
     margin: 0px;
     padding: 0px;
 }
+
 label {
     margin: 0px;
     padding: 0px;
@@ -45,6 +47,9 @@ body {
     color: var(--primary-text-color);
     font-family: "Roboto",-apple-system,BlinkMacSystemFont,avenir next,avenir,segoe ui,helvetica neue,helvetica,Cantarell,Ubuntu,roboto,noto,arial,sans-serif;
 }
+
+
+/* sass\components\_hero.scss */
 
 .hero {
   background-color: var(--background-color)
@@ -69,6 +74,7 @@ body {
 
  
                       /* Ресет */ 
+        /* sass\components\_base.scss */
 
 
 ul { 
@@ -121,8 +127,9 @@ address {
 
 
                              /* контакти */    
+/* sass\components\_contacts-header.scss */
    
-   .address__list {
+.address__list {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -157,6 +164,8 @@ address {
 }
                     
 /* общие свойства для секций */
+/* sass\components\_base.scss */
+
 
 .projects, 
 .filter, 
@@ -188,16 +197,6 @@ address {
 
 
 
-.activities {
-    width: 1200px;  
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 0px;
-    padding-bottom: 94px;
-    margin-left: auto;
-    margin-right: auto;
-   
-}
 
 .footer__container{
     display: flex;
@@ -231,6 +230,7 @@ address {
 }
 
                             /* logo */
+/* sass\components\_logo.scss */
 
 .logo {
     display: flex;
@@ -252,7 +252,8 @@ address {
 
 
 
-/* nav - header */
+                                /* nav - header */
+/* C:\Users\Valerii\Documents\GitHub\goit-markup-hw-07\sass\components\_navigation.scss */
 
 .nav {
     display: flex;
@@ -316,6 +317,7 @@ address {
 }
 
                                     /* контакти */
+/* sass\components\_contacts-header.scss                                     */
 .contacts {
     display: flex;
     margin-left: auto;
@@ -364,6 +366,9 @@ address {
 
 
                         /* hero */
+
+/* sass\components\_hero.scss */
+
 /* Ефективні рішення для вашого бізнесу */
 .hero {
     text-align: center;
@@ -430,6 +435,7 @@ address {
                  /* Переваги */
  
                   /* benefits */
+/* sass\components\_benefits.scss */
 
 .benefits__title {
     font-style: normal;
@@ -484,31 +490,45 @@ address {
 }
 
                     /* чим ми займаємося */
-.activities__title  {
+                    /* sass\components\_activites.scss */
+
+.activites {
+    width: 1200px;  
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 94px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.activites__title  {
     margin-top: 0px;
     margin-bottom: 50px;
                     
 } 
 
-.activities__list {
+.activites__list {
+    display: flex;
     margin: 0px;
     justify-content: space-between;
 
  }
 
- .activities__list :nth-child(3n) {
+ .activites__list :nth-child(3n) {
     margin-right: 0px;
 }
 
-.activities__item {
+.activites__item {
     position: relative;
     margin-left: 30px;
 }
-.activities__list :nth-child(1) {
+.activites__list :nth-child(1) {
     margin-left: 0px;
 }
 
-.activities__text{
+.activites__text{
     position: absolute;
     padding-top: 27px;
     padding-bottom: 27px;
@@ -522,7 +542,7 @@ address {
    
   }
   
-.activities__text {
+.activites__text {
 color:var(--white-color);
     font-weight: 700;
     font-size: 14px;
@@ -542,6 +562,8 @@ color:var(--white-color);
 
 
                                     /* Команда */
+/* sass\components\_team.scss */
+
 .team {
     background-color: var(--button-background-color);
     padding-top: 94px;
@@ -618,7 +640,20 @@ color:var(--white-color);
 }
 
 
- /* соцсети команды */
+                            /* соцсети команды */
+ /* sass\components\_icons-social.scss */
+
+ .iconssocial {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    list-style: none;
+}
 
 .iconssocial__list {
     border-radius: 50%;
@@ -647,31 +682,14 @@ color:var(--white-color);
     fill: var(--white-color);
 }
 
-
-/* container */
-
-.time-composition {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-
-}  
-
-
-.time-composition {
-    gap: 30px;
-}
-.item-body {
- background-color: var(--background-color-page);
-}
-
-.title  {
+/* .title  {
     margin-top: 0px;
     margin-bottom: 10px; 
-}  
+}   */
 
+
+                                /* h2 */
+/* sass\components\_base.scss */
 .section__title,
 .team__title {
     font-size: 36px;
@@ -684,40 +702,31 @@ color:var(--white-color);
     color: var(--title-text-color);
 }
 
-.iconssocial {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 32px;
-    padding-right: 32px;
-    list-style: none;
-}
 
 /* _____________________________________________ */
                     /* ПОРТФОЛИО */
 
                     /* фильтр направлений*/
+                    /* sass\components\_portfolio-filter.scss */
+
+
 
 .filter {
-    display: flex;
     flex-wrap: wrap;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+ 
 }  
 
 .filter {
     gap: 30px;
     padding-left: 0px;
 }
-                                           
-   /* prolect */
+ 
+
+
+
+                                /* prolect */
+   /* sass\components\_portfolio-projects.scss */
+
 .project__thumb {
     position: relative;
     overflow: hidden;
@@ -890,6 +899,7 @@ padding-bottom: 0px;
     letter-spacing: 0.03em;
 }
                              /* Постійні клієнти */
+                             /* sass\components\_clients.scss */
              
 .clients {
     padding-top: 94px;
@@ -933,7 +943,7 @@ padding-bottom: 0px;
 
 
                         /* footer */
-                        
+                        /* sass\components\_page-footer.scss */
 
 .footer {
     background: var(--color-section);
@@ -987,6 +997,7 @@ padding-bottom: 0px;
 
 
                 /* Приєднуйтесь join */
+                /* sass\components\_join.scss */
 
 
 .join {
@@ -1008,7 +1019,10 @@ padding-bottom: 0px;
     margin: 0;
     margin-bottom: 20px;
 }
-                /* icons */
+                /* icons-footer */
+                /* sass\components\_icons-footer.scss */
+
+
 .icons {
     display: flex;
     justify-content: start;
@@ -1048,6 +1062,8 @@ padding-bottom: 0px;
 }
 
 /* ПІДПИШИСЬ НА РОЗСИЛКУ */
+/* sass\components\_subscription.scss */
+
 
 .subscription__button {
     background-color: #2196F3;
@@ -1093,6 +1109,7 @@ padding-bottom: 0px;
                      /* Portfolio */
 
                     /* button-filter */
+                    /* sass\components\_portfolio-filter.scss */
 .filter__list {
     display: flex;
     align-items: center;
@@ -1161,14 +1178,15 @@ margin-right: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
  
-.footer-social .social {
+/* .footer-social .social {
     margin: 0px;
-}
+} */
 
 
 
 
     /* модальное окно */
+    /* sass\components\_modal.scss */
 
 .backdrop {
     position: fixed;
@@ -1272,9 +1290,9 @@ margin-right: 8px;
     margin-bottom: 10px;
 }
 
-.form__imputs.user-comment {
+/* .form__imputs.form__textarea {
     margin: 0;
-}
+} */
 
 .form__imputs:hover,
 .form__imputs:focus {
@@ -1339,6 +1357,32 @@ fill: var(--accent-color);
 
 }
 
+
+
+
+.form__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+   width: 100%;
+   height: 58px;
+   border-radius: 4px;
+   margin: 0;
+   margin-top: 4px;
+   resize: none;
+   padding: 12px 16px;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 1.16;
+   letter-spacing: 0.01em;
+   color: var(--title-text-color);
+
+}
+
+.form__textarea:hover,
+.form__textarea:focus {
+ border: 1px solid var(--accent-color);  
+   
+}
+
 /* checkbox */
 
 .checkbox {
@@ -1370,7 +1414,7 @@ fill: var(--accent-color);
 .checkbox__icon {
     display: inline-block;
     position: absolute;
-    left: 17px;
+    left: 19px;
     border-radius: 2px;
     fill: #ffffff; 
     border: 2px solid #212121;
@@ -1443,12 +1487,18 @@ fill: var(--accent-color);
   
 }
 
+
+/* sass\components\_subscription.scss */
+
 .subscription{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 93px;
 }
+
+
+
 
 .subscription__text {
     margin-bottom: 20px;
@@ -1497,28 +1547,10 @@ fill: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
 }
 
-.user-comment {
-     border: 1px solid rgba(33, 33, 33, 0.2);
-    width: 100%;
-    height: 58px;
-    border-radius: 4px;
-    margin: 0;
-    margin-top: 4px;
-    resize: none;
-    padding: 12px 16px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var(--title-text-color);
 
-}
 
-.user-comment:hover,
-.user-comment:focus {
-  border: 1px solid var(--accent-color);  
-    
-}
+/* ____________________________________________________ */
+
 
 .text-comment {
 font-weight: 400;
