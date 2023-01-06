@@ -29,10 +29,10 @@
     margin-left: 0;
 
     &__list { 
-      @extend %list;
-    //     margin-top: 0;
-    // margin-bottom: 0;
-    // list-style: none;
+   
+     margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
     
     padding-left: 0;
     font-size: 14px;
