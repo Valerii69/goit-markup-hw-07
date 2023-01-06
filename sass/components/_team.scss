@@ -1,10 +1,10 @@
 .team {
-    @extend %section; 
+    // @extend %section; 
     background-color: $buttonBackgroundColor;
 
 }
-.team {
-    @extend %container;
+.team__list {
+@extend %container
 }
                                     
 .team__list {

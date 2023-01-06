@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.projects, .filter, .clients__list, .team, .benefits__list, .header, .activites__list,
+.projects, .filter, .clients__list, .team__list, .benefits__list, .header, .activites__list,
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,7 +26,7 @@
   list-style: none;
 }
 
-.projects__section, .footer__container, .clients, .team, .benefits {
+.projects__section, .footer__container, .clients, .benefits {
   padding-top: 94px;
   padding-bottom: 94px;
 }
