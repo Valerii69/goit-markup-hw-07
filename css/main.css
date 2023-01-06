@@ -1391,7 +1391,7 @@ address {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
-.project__overlay .project__link:hover .project__overlay {
+.project__link:hover .project__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }

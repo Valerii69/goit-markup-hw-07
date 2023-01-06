@@ -142,14 +142,13 @@
     color: $whiteColor;
     transition: transform 250ms $transitionCubic;
     transform: translateY(100%); 
-
-    .project__link:hover .project__overlay {
+    
+.project__link:hover & {
         transform: translateY(0);
     }
 
-
 } 
-
+ 
 
 .project__title {
     font-family: 'Roboto';
