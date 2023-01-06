@@ -1,6 +1,6 @@
 .team {
-    background-color: $buttonBackgroundColor;
-    @extend %section;                                    
+    @extend %section; 
+    background-color: $buttonBackgroundColor;                                   
 }
                                     
 .team__list {
