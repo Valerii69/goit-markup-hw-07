@@ -40,9 +40,7 @@
     letter-spacing: 0.03em;
     font-style: normal;
     
-}
-
-
+    }
 }
 
 .address {
@@ -63,19 +61,19 @@
     &:hover, 
     &:focus {
     color: $accentColor;
- }
- }
+    }
+}
  
-
-                    
+                   
  .address__item {
     color: rgba(255,255,255,0.6);
     text-decoration: none;
     transition: color 250ms $transitionCubic;
+
     &:hover, 
     &:focus {
     color: $accentColor;
-}
+    }
  
 }
 .address__item {
