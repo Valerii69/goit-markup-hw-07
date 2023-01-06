@@ -1107,7 +1107,7 @@ address {
 }
 
 .modal__button {
-  color: var(--white-color);
+  color: #ffffff;
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
