@@ -5,6 +5,7 @@
 
 .filter {
     @extend %container;
+    justify-content: space-around;
      
 }
 
@@ -13,13 +14,17 @@
     padding-left: 0px;
 }
  
+.visually--hidden {
+    @extend %visually--hidden; 
+}
+
 .filter__list {
     display: flex;
     align-items: center;
     justify-content:center;
-    padding-left: 0px;
+    // padding-left: 0px;
     border-radius: 4px;
-    margin: 50px;
+    margin-bottom: 50px;
     margin-top: 0;
     min-width: 216px;   
     transition: background-color 250ms $transitionCubic;
@@ -28,20 +33,19 @@
 
  .filter__list {
     padding: 0;
-    margin-bottom: 35px;
     list-style: none;
 }
 
 
 .filter__list {
-    display:inline-flex;
-    align-items: center;
+    // display:inline-flex;
+    // align-items: center;
     color: $titleTextColor;
     cursor: pointer;
     font-family: inherit;
     border-radius: 4px;
     border: 1px solid transparent;
-    padding: 6px 22px;
+    // padding: 6px 22px;
     text-align: center;
     font-weight: 500;
     font-size: 16px;

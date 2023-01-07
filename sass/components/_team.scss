@@ -1,10 +1,13 @@
-.team {
-    @extend %section; 
+.team__section {
+    @extend %section;
     background-color: $buttonBackgroundColor;
 
 }
-.team__list {
-@extend %container
+.team__container {
+    @extend %container;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
                                     
 .team__list {
@@ -12,12 +15,29 @@
     flex-wrap: wrap;
     font-family: Roboto, sans-serif;
     font-style: normal;
+    padding-left: 0;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+
  
     &__list {
    @extend %list
 }
 }
 
+.team__title {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+    /* margin-bottom: 10; */
+    color: $titleTextColor;
+}
 
 
 .team__item {

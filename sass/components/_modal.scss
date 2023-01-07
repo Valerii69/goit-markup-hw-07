@@ -4,18 +4,28 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);;
-    transition: opasity 250ms $transitionCubic, visibility 250ms $transitionCubic;
+    background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-
+    transition: opasity 250ms $transitionCubic, visibility 250ms $transitionCubic;
+    
+  
+  
     &.is-hidden { 
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-  
-}
-}   
+    transition: opasity 250ms $transitionCubic, visibility 250ms $transitionCubic;
+     
+    }
 
+    &.is-hidden .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotateZ(0deg);
+    transition: transform 250ms $transitionCubic;
+   }
+}   
 
 
 .form {
@@ -39,17 +49,17 @@
 
 .modal {
     position: absolute;
+    width: 528px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 528px;
+    transform: translate(-50%, -50%); 
     background-color: $backgroundColorPage; 
-    transition: background-color  250ms $transitionCubic;
+    transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
     /* padding: 40px; */
     border: 1px solid transparent;
     border-radius: 4px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);   
-     
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.20);
+    transition: transform 250ms $transitionCubic, background-color 250ms $transitionCubic;
 }
 
 
@@ -77,8 +87,8 @@
     padding: 0;
     background-color: $backgroundColorPage;
     fill: rgba(0, 0, 0, 1);
-     transition: fill  250ms $transitionCubic;
-
+    transition: transform 250ms $transitionCubic, fill  250ms $transitionCubic;
+ 
     &:hover,
     &:focus { 
     fill: $accentBackgroundColor;

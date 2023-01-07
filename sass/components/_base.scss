@@ -1,10 +1,10 @@
 body {
-    display: block;
-    width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    // display: block;
+    // width: 1600px;
+    // margin-left: auto;
+    // margin-right: auto;
     color: $primaryTextColor;
-    font-family: "Roboto",-apple-system,BlinkMacSystemFont,avenir next,avenir,segoe ui,helvetica neue,helvetica,Cantarell,Ubuntu,roboto,noto,arial,sans-serif;
+    font-family: "Roboto",sans-serif;
 }
 textarea {
     margin: 0px;
@@ -21,6 +21,7 @@ input {
 }
 ul { 
     list-style: none;
+    padding: 0;
 }
 
 /* Стили для обнуления верхних отступов у элементов */
@@ -82,42 +83,22 @@ address {
 
 
 
-.footer__container{
-    display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-}
-
-
                                     /* header */
 
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     border-bottom: 1px solid $borderColorPage;
-    padding-right: 0px;  
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    align-items: normal;
+    // padding-right: 0px;  
+    // margin-top: 0px;
+    // margin-bottom: 0px;
+    // margin-left: auto;
+    // align-items: normal;
 
 }
 
                           
                             /* h2*/
 
-.section__title,
-.team__title {
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-top: 0;
-    margin-bottom: 50px;
-    /* margin-bottom: 10; */
-    color: $titleTextColor;
-}
+

@@ -1,25 +1,44 @@
-.footer {
-    background: $colorPageFooter;
+.footer__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: $backgroundColor;
    
 }
 
 .footer__container {
-    display: flex;
-    @extend %section;
+    @extend %container;
+     // @extend %section;
     // padding-top: 60px;
-    // padding-bottom: 60px;
+    // padding-bottom: 60px; margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .footer__container {
     text-decoration: none;
-    color: $whiteColor;
+    background-color: $backgroundColor;
     font-size: 26px;
     line-height: 1.19;
     text-align: start;
     letter-spacing: 0.03em;
 
+
+
 }
+
+
+
+// .footer__container{
+//     // display: flex;
+//     // padding-left: 15px;
+//     // padding-right: 15px;
+   
+// }
+
+
+
+
                            /* КОНТАКТИ */
 .address {
     display: flex;

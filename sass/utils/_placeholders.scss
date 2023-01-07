@@ -1,13 +1,26 @@
+// %container {
+//     display: flex;
+//     width: 1200px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     margin: 0 auto;
+//     align-items: center;
+//     justify-content: center;
+//     list-style: none; 
+// }
+
+
 %container {
     display: flex;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    list-style: none; 
+    // align-items: center;
+    // justify-content: center;
+    // list-style: none; 
 }
+
 
 %list {
     display: flex;
@@ -28,4 +41,16 @@
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+}
+%visually--hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }

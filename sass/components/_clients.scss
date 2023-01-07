@@ -1,9 +1,18 @@
-.clients {
-    @extend %section
+.clients__section {
+    @extend %section;
 }
-.clients__list {
+
+.clients__container {
     @extend %container;
-} 
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+// .clients__list {
+//     @extend %list;
+// } 
 
 .clients__list {
     display: flex;

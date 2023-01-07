@@ -45,8 +45,9 @@
     <button  type="button" class="hero__button" data-modal-open>Замовити послугу</button>
   </section>
   <!-- ПЕРЕВАГИ -->
-  <section class="benefits">
-    <h2 hidden>Переваги </h2>    
+  <section class="benefits__section">
+    <div class="benefits__container">
+    <h2 class="visually--hidden">Переваги </h2>    
       <ul class="benefits__list">
       <li class="benefits__item">
        <div class="benefits__icons-box">
@@ -84,28 +85,30 @@
            <h3 class="benefits__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
            <p class="benefits__text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
          </li>
-       </ul>
+      </ul>
+    </div>
  </section>
     <!-- Чим ми займаємось     -->
-        <section class="activites">
-             <h2 class="section__title">Чим ми займаємося</h2>        
-                <ul class="activites__list">
-                   <li class="activites__item">
-                     <img src="./images/Box/box1.jpg" class="work-see" alt="Картинка-1" width="370">
-                      <p class="activites__text">ДЕКСТОПНІ ДОДАТКИ</p>
-                  </li>        
-                  <li class="activites__item">
-                    <img src="./images/Box/box2.jpg" class="work-see" alt="Картинка-2" width="370">
-                 <p class="activites__text">МОБІЛЬНІ ДОДАТКИ</p>
-                 </li>
-                  <li class="activites__item">
-                    <img src="./images/Box/box3.jpg" class="work-see" alt="Картинка-3" width="370">
+  <section class="activites__section">
+        <h2 class="activites__title">Чим ми займаємося</h2>        
+          <ul class="activites__list">
+            <li class="activites__item">
+              <img src="./images/Box/box1.jpg" class="work-see" alt="Картинка-1" width="370">
+                 <p class="activites__text">ДЕКСТОПНІ ДОДАТКИ</p>
+            </li>        
+            <li class="activites__item">
+              <img src="./images/Box/box2.jpg" class="work-see" alt="Картинка-2" width="370">
+                <p class="activites__text">МОБІЛЬНІ ДОДАТКИ</p>
+            </li>
+            <li class="activites__item">
+              <img src="./images/Box/box3.jpg" class="work-see" alt="Картинка-3" width="370">
                 <p class="activites__text">ДИЗАЙНЕРСЬК РІШЕННЯ</p>
-               </li>
-              </ul>
-        </section>
+            </li>
+        </ul>
+  </section>
     <!--Наша команда-->
-  <section class="team">
+  <section class="team__section">
+    <div class="team__container">
      <h2 class="team__title">Наша команда</h2>
           <ul class="team__list"> 
             <li class="team__item"> 
@@ -249,9 +252,12 @@
                     </ul>
             </li>
           </ul>
+    </div>
+  </div>
   </section>
    <!-- постійні клієнти -->
-  <section class="clients">
+  <section class="clients__section">
+    <div class="clients__container"> 
       <h2 class="clients__title">Постійні клієнти</h2>
       <ul class="clients__list">
         <li>
@@ -298,10 +304,11 @@
         </li>
       </ul>
     <!-- </div> -->
+  </div>
   </section>
     </main>
     <!-- footer -->
-  <footer class="footer">      
+  <footer class="footer__section ">      
         <!-- Контакты--> 
         <div class="footer__container">
           <div class="address">                
@@ -356,9 +363,9 @@
         </div>   
       </div>    
    <!-- </div>   -->
-</footer>
+  </footer>
 <!-- модальне вікно -->
-  <div class="backdrop" data-modal>
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal" >
 <!-- кнопка закритття -->
      <button  class="close" data-modal-close>

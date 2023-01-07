@@ -1,6 +1,12 @@
 
 .header {
-    @extend %container;
-
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color-page);
+    padding-right: 0px;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    align-items: normal;
 
 }

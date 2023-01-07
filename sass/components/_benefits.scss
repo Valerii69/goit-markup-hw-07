@@ -1,9 +1,18 @@
+.benefits__container {
+      @extend %container;  
+}
+
+.benefits__section {
+  @extend %section;
+}
+
 .benefits__list {
-    @extend %container;  
+  display: flex;  
+  align-items: start;
+  margin: 0;
+  padding: 0;
 }
-.benefits {
-    @extend %section;
-}
+
 
 .benefits__title {
     font-style: normal;
@@ -24,17 +33,20 @@
 }
     
 
-.benefits__list {
-    align-items: start;
-}
+
 
 .benefits__item {
     display: inline-block;
     width: 270px;
-    padding: 0;
+    padding-left: 0;
     margin-left: 30px;
 
 }
+.benefits__item:nth-child(1) {
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .benefits__icon {
     margin-right: 10px;
     fill: currentcolor;

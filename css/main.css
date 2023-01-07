@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.projects, .filter, .clients__list, .team__list, .benefits__list, .header, .activites__list,
+.projects, .filter, .footer__container, .clients__container, .team__container, .benefits__container, .activites__list,
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,13 +8,6 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
 }
 
 .team__list__list, .nav {
@@ -26,18 +19,28 @@
   list-style: none;
 }
 
-.projects__section, .footer__container, .clients, .team, .benefits {
+.projects__section, .clients__section, .team__section, .benefits__section, .activites__section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
+.visually--hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
-  display: block;
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   color: #757575;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 textarea {
@@ -57,6 +60,7 @@ input {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 /* Стили для обнуления верхних отступов у элементов */
@@ -111,22 +115,12 @@ address {
   text-decoration: none;
 }
 
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* header */
+.header {
+  border-bottom: 1px solid #ECECEC;
 }
 
-/* header */
+/* h2*/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +128,7 @@ address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid var(--border-color-page);
   padding-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -142,19 +136,6 @@ address {
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
-}
-
-/* h2*/
-.section__title,
-.team__title {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 0;
-  margin-bottom: 50px;
-  /* margin-bottom: 10; */
-  color: #212121;
 }
 
 .logo {
@@ -179,6 +160,8 @@ address {
 }
 .logo--footer {
   color: #ffffff;
+  margin: 0px;
+  text-align: start;
 }
 
 .nav {
@@ -264,6 +247,7 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 0;
 }
 
 .contacts__item:nth-child(1) {
@@ -370,19 +354,24 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.activites {
+.activites__section {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
   padding-top: 0px;
-  padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .activites__title {
-  margin-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
   margin-bottom: 50px;
+  /* margin-bottom: 10; */
+  color: #212121;
 }
 
 .activites__list {
@@ -395,12 +384,11 @@ address {
   margin-right: 0px;
 }
 .activites__list:nth-child(1) {
-  margin-left: 0px;
+  padding-left: 0;
 }
 
 .activites__item {
   position: relative;
-  margin-left: 30px;
 }
 
 .activites__text {
@@ -428,6 +416,17 @@ address {
   letter-spacing: 0.03em;
 }
 
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin: 0;
+  padding: 0;
+}
+
 .benefits__title {
   font-style: normal;
   font-weight: 700;
@@ -447,17 +446,16 @@ address {
   letter-spacing: 0.03em;
 }
 
-.benefits__list {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-}
-
 .benefits__item {
   display: inline-block;
   width: 270px;
-  padding: 0;
+  padding-left: 0;
   margin-left: 30px;
+}
+
+.benefits__item:nth-child(1) {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .benefits__icon {
@@ -488,8 +486,16 @@ address {
   border-radius: 4px;
 }
 
-.team {
+.team__section {
   background-color: #F5F4FA;
+}
+
+.team__container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .team__list {
@@ -500,7 +506,26 @@ address {
       flex-wrap: wrap;
   font-family: Roboto, sans-serif;
   font-style: normal;
+  padding-left: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
 }
+.team__title {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+  /* margin-bottom: 10; */
+  color: #212121;
+}
+
 .team__item {
   margin-left: 0px;
   background: #ffffff;
@@ -578,8 +603,6 @@ address {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
   list-style: none;
 }
 
@@ -603,6 +626,14 @@ address {
 .iconssocial__link:hover, .iconssocial__link:focus {
   background-color: #2196F3;
   fill: #ffffff;
+}
+
+.clients__container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .clients__list {
@@ -651,19 +682,24 @@ address {
   fill: #2196F3;
 }
 
-.footer {
-  background: #2f303a;
+.footer__section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #2F303A;
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__container {
   text-decoration: none;
-  color: #ffffff;
+  background-color: #2F303A;
   font-size: 26px;
   line-height: 1.19;
   text-align: start;
@@ -872,14 +908,27 @@ address {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
   -webkit-transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  -webkit-transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0) rotateZ(0deg);
+          transform: translate(-50%, -50%) scale(0) rotateZ(0deg);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form {
@@ -899,19 +948,23 @@ address {
 
 .modal {
   position: absolute;
+  width: 528px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
   background-color: #ffffff;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+          transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
   /* padding: 40px; */
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close__icon {
@@ -946,8 +999,10 @@ address {
   padding: 0;
   background-color: #ffffff;
   fill: rgb(0, 0, 0);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close:hover, .close:focus {
   fill: #188CE8;
@@ -1157,6 +1212,11 @@ address {
 }
 
 .filter {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.filter {
   gap: 30px;
   padding-left: 0px;
 }
@@ -1171,9 +1231,8 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 0px;
   border-radius: 4px;
-  margin: 50px;
+  margin-bottom: 50px;
   margin-top: 0;
   min-width: 216px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1182,23 +1241,15 @@ address {
 
 .filter__list {
   padding: 0;
-  margin-bottom: 35px;
   list-style: none;
 }
 
 .filter__list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #212121;
   cursor: pointer;
   font-family: inherit;
   border-radius: 4px;
   border: 1px solid transparent;
-  padding: 6px 22px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -1431,7 +1482,6 @@ address {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
-  padding-right: 32px;
   list-style: none;
   margin: 0;
 }
