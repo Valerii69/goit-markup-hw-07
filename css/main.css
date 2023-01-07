@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.projects, .filter, .footer__container, .clients__container, .team__container, .benefits__container, .activites__list,
+.projects, .filter, .footer__container, .clients__container, .team__container, .benefits__container, .activites__container, .activites__list,
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,36 +355,34 @@ address {
 }
 
 .activites__section {
-  width: 1200px;
   padding-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.activites__container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .activites__title {
-  padding-left: 15px;
-  padding-right: 15px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0;
   margin-bottom: 50px;
-  /* margin-bottom: 10; */
   color: #212121;
 }
 
 .activites__list {
+  gap: 30px;
   margin: 0px;
+  padding: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.activites__list:nth-child(3n) {
-  margin-right: 0px;
-}
-.activites__list:nth-child(1) {
-  padding-left: 0;
 }
 
 .activites__item {
