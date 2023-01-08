@@ -114,12 +114,6 @@
     margin-bottom: 10px;
 }
 
-// .form__imputs.user-comment {
-//     margin: 0;
-// }
-
-
-
 .form__label {
 font-weight: 400;
 font-size: 12px;
@@ -134,24 +128,51 @@ color: $primaryTextColor;
 
 .form__imputs  {
 position: relative;
-transition: fill 250ms $transitionCubic, color 250ms $transitionCubic;
+
 cursor: pointer;
 margin: 0;
 height: 40px;
 border: 1px solid rgba(33,33,33,.2);
 border-radius: 4px;
 padding-left: 42px;
+transition: fill 250ms $transitionCubic, color 250ms $transitionCubic;
     &:hover,
     &:focus {
         border: $accentColor;
         fill: $accentColor;
+        
     }  
 
 }
+.form__imputs:focus  {
+    outline: 1px solid #2196f3;
+    cursor: pointer;
+    }
+.form__imputs:hover  {
+outline: 1px solid #2196f3;
+cursor: pointer;
+}
 
+
+.form__icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    fill: $titleTextColor;
+    transition: fill 250ms $transitionCubic;
+    
+    .form__box:focus + &,
+    .form__box:hover + & {
+        fill: $accentColor;
+       
+    }
+}
 
 
 .form__box {
+    position: relative;
     width: 448px;
     height: 40px;
     padding: 0px;
@@ -161,28 +182,30 @@ padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 4px;
+    // margin-top: 4px;
     fill: $accentColor;
-    transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms $transitionCubic;
+    transition: fill 250ms $transitionCubic, border 250ms $transitionCubic;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
     border: 1px solid $accentColor;
     fill: $accentColor;
-}
 
+    
+}
+   
 } 
 
 
-.form__icon{
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    width: 18px;
-    height: 18px;
-   
+.form__icon:hover,
+.form__icon:focus{
 
-}
+        fill: $accentColor;
+        color: $accentColor;
+    }
+
+
 
 /* checkbox */
 

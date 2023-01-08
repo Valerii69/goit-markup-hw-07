@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.projects, .filter, .footer__container, .clients__container, .team__container, .benefits__container, .activites__container, .activites__list,
+.projects, .filter, .footer__container, .clients__container, .benefits__container, .activites__list,
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +128,6 @@ address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid var(--border-color-page);
   padding-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -136,6 +135,10 @@ address {
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -364,6 +367,10 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .activites__title {
@@ -457,7 +464,6 @@ address {
 }
 
 .benefits__icon {
-  margin-right: 10px;
   fill: currentcolor;
 }
 
@@ -489,6 +495,10 @@ address {
 }
 
 .team__container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -512,8 +522,6 @@ address {
   margin: 0;
 }
 .team__title {
-  padding-left: 15px;
-  padding-right: 15px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -645,6 +653,7 @@ address {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+  margin: 0;
 }
 
 .clients__title {
@@ -684,20 +693,23 @@ address {
   padding-top: 60px;
   padding-bottom: 60px;
   background: #2F303A;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .footer__container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .footer__container {
   text-decoration: none;
-  background-color: #2F303A;
   font-size: 26px;
   line-height: 1.19;
   text-align: start;
@@ -760,7 +772,7 @@ address {
 }
 
 .address__item {
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 .join {
@@ -1036,21 +1048,46 @@ address {
 
 .form__imputs {
   position: relative;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   margin: 0;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__imputs:hover, .form__imputs:focus {
   border: #2196F3;
   fill: #2196F3;
 }
 
+.form__imputs:focus {
+  outline: 1px solid #2196f3;
+  cursor: pointer;
+}
+
+.form__imputs:hover {
+  outline: 1px solid #2196f3;
+  cursor: pointer;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__box:focus + .form__icon, .form__box:hover + .form__icon {
+  fill: #2196F3;
+}
+
 .form__box {
+  position: relative;
   width: 448px;
   height: 40px;
   padding: 0px;
@@ -1060,22 +1097,19 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 4px;
   fill: #2196F3;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__box:hover, .form__box:focus {
+.form__box:hover, .form__box:focus, .form__box:active {
   border: 1px solid #2196F3;
   fill: #2196F3;
 }
 
-.form__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  width: 18px;
-  height: 18px;
+.form__icon:hover,
+.form__icon:focus {
+  fill: #2196F3;
+  color: #2196F3;
 }
 
 /* checkbox */
@@ -1205,20 +1239,11 @@ address {
 }
 
 .filter {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
-.filter {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.filter {
-  gap: 30px;
-  padding-left: 0px;
-}
-
 .filter__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1229,20 +1254,11 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 4px;
   margin-bottom: 50px;
   margin-top: 0;
-  min-width: 216px;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter__list {
   padding: 0;
   list-style: none;
-}
-
-.filter__list {
+  min-width: 216px;
   color: #212121;
   cursor: pointer;
   font-family: inherit;
@@ -1298,28 +1314,6 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 0px;
-  /* padding-left: 0px; */
-  margin-bottom: 0px;
-}
-
 .project__thumb {
   position: relative;
   overflow: hidden;
@@ -1368,7 +1362,8 @@ address {
   margin-right: 0px;
 }
 
-.project__item:hover {
+.project__item:hover,
+.project__item:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1440,7 +1435,7 @@ address {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
-.project__link:hover .project__overlay {
+.project__link:hover .project__overlay, .project__link:focus .project__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }

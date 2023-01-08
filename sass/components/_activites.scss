@@ -6,13 +6,15 @@
    
 }
 .activites__container {
-    @extend %container;
+    // @extend %container;
+
+
     flex-wrap: wrap;
     justify-content: center;
-    // width: 1200px;
-    // padding-left: 15px;
-    // padding-right: 15px;
-    // margin: 0 auto;  
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;  
 }
 
 

@@ -4,7 +4,10 @@
 
 }
 .team__container {
-    @extend %container;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -27,8 +30,6 @@
 }
 
 .team__title {
-    padding-left: 15px;
-    padding-right: 15px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
